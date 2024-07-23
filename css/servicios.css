@@ -1,3 +1,6 @@
+html{
+    height: 100%;
+}
 *{
     font-family: "Roboto Mono", monospace;
     padding: 0;
@@ -7,6 +10,10 @@
     list-style: none;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     font-family: sans-serif;
 }
 
@@ -18,11 +25,7 @@ body{
 
 .content{
     min-height: 80px;
-    background: linear-gradient(
-        90deg,
-        rgba(203,18,133,1)0%,
-        rgba(80,49,145,1) 70%
-    );
+    background-image: linear-gradient(to top, #f9d423  0%, #e14fad 100%);
 }
 .menu{
     position: absolute;
@@ -64,22 +67,59 @@ body{
     font-size: 2rem;
     display: flex;
 }
+.text{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    animation:  text 2s ease-out 1 alternate;
+}
+@keyframes text{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.001);
+    }
+}
 .carro{
     width: 350px;
+    object-fit: scale-down;
+    filter: drop-shadow(4px 4px 8px #556);
+    animation:  car 2s ease-out 1 alternate;
+}
+@keyframes car{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.001);
+    }
 }
 .otnei{
-    width: 350px;
+    height: 350px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.671);
+    animation:  nei 2s ease-out 1 alternate;
 }
+@keyframes nei{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.001);
+    }
+}
+
 .pedimiento{
     font-size: 2rem;
     display:flex ;
 }
 footer{
-
+    margin-top: auto;
     background-color: #222;
     padding: 3rem;
     color: white;
-
 }
 footer section{
     float: right;
@@ -93,6 +133,6 @@ footer a{
     text-decoration: none;
 }
 footer a:hover{
-
+    cursor: pointer;
     color:darkslateblue;
 }

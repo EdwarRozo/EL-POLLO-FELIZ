@@ -1,29 +1,28 @@
-html{
-    font-family: "Roboto Mono", monospace;
 
-    
+html{
+    height: 100%;
+    font-family: "Roboto Mono", monospace;
 }
 
 
 
  body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0 auto;
-    background-color: #efefef;
-    
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 } 
 .container{
     max-width: 1200px;
     margin: 0 auto;
-
+    margin-bottom: auto;
 }
 
 .content{
     min-height: 80px;
-    background: linear-gradient(
-        90deg,
-        rgba(203,18,133,1)0%,
-        rgba(80,49,145,1) 70%
-    );
+    background-image: linear-gradient(to top, #f9d423  0%, #e14fad 100%);
 }
 .menu{
     position: absolute;
@@ -52,7 +51,6 @@ html{
     font-size: 18px;
     padding: 20px;
     color: #DEDEDEDE;
-    display: block;
     font-weight: bold;
 }
 .menu .navbar ul li a:hover{
@@ -69,26 +67,31 @@ html{
     cursor: pointer;
     display: none;
 }
-
+/* C O N T E N I D O */
 h1{
     font-size: 3rem;
 }
 
 header{
-    background-color: #362536;
+    background: linear-gradient(
+        90deg,
+        rgba(203,18,133,1)0%,
+        rgba(80,49,145,1) 70%
+    );
     color: white;
     padding: 2rem 3rem;
 }
-/* section{
-    text-align: center;
-} */
 header h1{
     font-size: 4rem;
     text-align: center;
 }
+header h1{
+    font-size: 4rem;
+    text-align: center;
+}
+/* M E N U */
 .menuses{
     width: 400px;
-
     margin: 0 auto;
 }
 section article{
@@ -96,19 +99,22 @@ section article{
     background-color: #fff;
     margin: 1rem;
     border-radius: 0.5rem;
-    padding: 0.25rem 0;
+    padding: auto;
     cursor: pointer;
+    transition: all .7s ease-out;
 }
 section article:hover{
-    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
-
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+    transform: translateX(7%) translateY(3%);
 }
-
-
 section article h2, section article p{
     margin: 1rem;
 }
+table{
+    border: 1px solid black;
+}
 footer{
+    margin-top: auto;
     background-color: #222;
     padding: 3rem;
     color: white;

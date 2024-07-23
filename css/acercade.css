@@ -1,3 +1,6 @@
+html{
+    height: 100%;
+}
 *{
     font-family: "Roboto Mono", monospace;
     padding: 0;
@@ -7,6 +10,10 @@
     list-style: none;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423  100%);
     font-family: sans-serif;
 }
 
@@ -18,11 +25,7 @@ body{
 
 .content{
     min-height: 80px;
-    background: linear-gradient(
-        90deg,
-        rgba(203,18,133,1)0%,
-        rgba(80,49,145,1) 70%
-    );
+    background-image: linear-gradient(to top, #f9d423  0%, #e14fad 100%);
 }
 .menu{
     position: absolute;
@@ -41,7 +44,7 @@ body{
 }
 
 .menu .navbar ul li{
-    position: relative;
+    position: sticky;
     float: left;
 }
 .menu .navbar ul li a{
@@ -69,16 +72,46 @@ body{
     font-size: 2rem;
     display: flex;
 }
-.imagen{
+.mision__title{
+    margin-left: 2rem;
+}
+.mision__paragraph{
+    margin-left: 2rem;
+}
+.pollo{
+    height: 450px;
     width: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+.pollo:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.507);
+    opacity: 95%;
+    transform: rotate(2deg );
+    cursor: pointer;
 }
 .recibimiento{
+    margin-left: 2rem;
     font-size: 2rem;
     display: flex;
 }
-
+.recibir{
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+.recibir:hover{
+    opacity: 95%;
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.342);
+    opacity: 95%;
+    transform: rotate(2deg);
+    cursor: pointer;
+}
 footer{
-
+    margin-top: auto;
     background-color: #222;
     padding: 3rem;
     color: white;

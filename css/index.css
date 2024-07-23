@@ -1,29 +1,28 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+html{
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
 *{
-    font-family: "Roboto Mono", monospace;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
+
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     font-family: sans-serif;
-}
-
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-
+    cursor: url('img/espada.png'), auto;
 }
 
 .content{
     min-height: 80px;
-    background: linear-gradient(
-        90deg,
-        rgba(203,18,133,1)0%,
-        rgba(80,49,145,1) 70%
-    );
+    background-image: linear-gradient(to top, #f9d423  0%, #e14fad 100%);
 }
 .menu{
     position: absolute;
@@ -46,6 +45,9 @@ body{
     float: left;
 }
 .menu .navbar ul li a{
+    transition: all .7s ease-out;
+}
+.menu .navbar ul li a{
     font-size: 18px;
     padding: 20px;
     color: #DEDEDEDE;
@@ -61,19 +63,27 @@ body{
 .menu-icono{
     width: 25px;
 }
-
-.menu label{
-    cursor: pointer;
-    display: none;
+.summer{
+    padding-top: 15vh ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-.eslogan{
-    font-size: 2rem;
+.summer__title{
+    font-family: cursive;
+    font-size: 45px;
+}
+.summer__paragraph{
+    font-family: cursive;
+    font-size: 1.7rem;
+    margin: 15px auto;
 }
 footer{
-    background-color: #222;
+    margin-top: auto;
     padding: 3rem;
+    background-color: #222;
     color: white;
-
 }
 footer section{
     float: right;
@@ -89,25 +99,4 @@ footer a{
 footer a:hover{
 
     color:darkslateblue;
-}
-
-
-@media(max-width:991px) {
-    .content{
-        min-height: 70px;
-    }
-    .menu{
-        top: 0;
-        padding: 20px;
-    }
-    .menu label{
-        display: initial;
-    }
-    .menu .navbar{
-        position: absolute
-    }
-
-
-
-
 }
